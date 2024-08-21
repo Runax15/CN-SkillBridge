@@ -98,25 +98,13 @@
   color: var(--text);
   font-family: var(--body-regular-body-2);
 }
-.enter-field {
-  width: 129.5px;
-  position: relative;
-  line-height: 20px;
-  display: inline-block;
-  height: 19.5px;
-  flex-shrink: 0;
-}
 .input-field {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-darkslategray-200);
   width: 465px;
   border-radius: var(--br-5xs);
-  background-color: var(--color-darkslategray-200);
   height: 39px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-4xs-8) 14.9px var(--padding-4xs-8) 20px;
-  box-sizing: border-box;
 }
 .start-practicing {
   position: relative;
@@ -137,9 +125,6 @@
   padding: var(--padding-mid) var(--padding-11xl);
   box-sizing: border-box;
   margin-left: -23px;
-  text-align: center;
-  font-size: var(--font-size-mini);
-  color: var(--background);
 }
 .search-bar {
   width: 622px;
@@ -290,9 +275,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 48px 53px;
-  text-align: center;
   font-size: var(--heading-headline-3-size);
-  color: var(--background);
 }
 .main {
   position: absolute;
@@ -306,9 +289,9 @@
   padding: 94px 172px;
   box-sizing: border-box;
   gap: 73px;
-  text-align: left;
-  font-size: var(--body-regular-body-3-size);
-  color: var(--primary);
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--background);
   font-family: var(--body-regular-body-2);
 }
 .screenshot-2024-08-18-at-408,
