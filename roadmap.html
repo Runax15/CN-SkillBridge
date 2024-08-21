@@ -13,31 +13,6 @@
   </head>
   <body>
     <div class="roadmap5">
-      <nav class="navbar2">
-        <ul class="navbar-text2" id="navbar">
-          <li class="roadmap6">Roadmap</li>
-          <li class="practice7" id="practiceListItem">Practice</li>
-          <li class="project2">Projects</li>
-          <li class="resources4">Resources</li>
-          <li class="placement4">Placement</li>
-        </ul>
-        <div class="navbar-button2">
-          <button class="sign-in2">
-            <div class="contact-us4">Sign In</div>
-          </button>
-          <button class="sign-up2">
-            <div class="contact-us5">Sign Up</div>
-          </button>
-        </div>
-        <a class="light-logo2" href="./home1.html" id="lightLogo">
-          <img
-            class="light-logo-icon2"
-            alt=""
-            src="./public/lightlogo@2x.png"
-            id="lightLogoImage"
-          />
-        </a>
-      </nav>
       <header class="header">
         <h1 class="course-roadmap-generator">
           <p class="course-roadmap2">Course Roadmap</p>
@@ -47,7 +22,7 @@
           <input class="input-field1" placeholder="Enter Field" type="text" />
 
           <button class="button11">
-            <div class="contact-us5">Generate Course Roadmap</div>
+            <div class="roadmap6">Generate Course Roadmap</div>
           </button>
         </div>
       </header>
@@ -109,8 +84,8 @@
           <div class="col-12">
             <h4 class="company2">Company</h4>
             <ul class="list-items4">
-              <a class="roadmap8" id="roadmap">Roadmap</a>
-              <li class="practice8" id="practiceListItem1">Practice</li>
+              <a class="roadmap7" id="roadmap">Roadmap</a>
+              <li class="practice7" id="practiceListItem">Practice</li>
               <li class="projects2">Projects</li>
               <li class="projects2">Resources</li>
               <li class="projects2">Placement</li>
@@ -126,22 +101,66 @@
           </div>
           <div class="col-32">
             <h4 class="company2">Stay up to date</h4>
-            <div class="email-input-field2">
-              <input
-                class="frame15"
-                placeholder="Your email address"
-                type="text"
-              />
-            </div>
+            <input
+              class="frame15"
+              placeholder="Your email address"
+              type="text"
+            />
           </div>
         </div>
       </footer>
+      <nav class="navbar2">
+        <ul class="navbar-text2" id="navbar">
+          <li class="roadmap8" id="roadmapListItem">Roadmap</li>
+          <li class="practice8" id="practiceListItem1">Practice</li>
+          <li class="project2">Projects</li>
+          <li class="resources5">Resources</li>
+          <li class="placement5">Placement</li>
+        </ul>
+        <div class="navbar-button2">
+          <button class="sign-in2">
+            <div class="contact-us4">Sign In</div>
+          </button>
+          <button class="sign-up2">
+            <div class="roadmap6">Sign Up</div>
+          </button>
+        </div>
+        <a class="light-logo2" href="./home1.html" id="lightLogo">
+          <img
+            class="light-logo-icon2"
+            alt=""
+            src="./public/lightlogo@2x.png"
+            id="lightLogoImage"
+          />
+        </a>
+      </nav>
     </div>
 
     <script>
+      var roadmap = document.getElementById("roadmap");
+      if (roadmap) {
+        roadmap.addEventListener("click", function (e) {
+          window.location.href = "./roadmap.html";
+        });
+      }
+
       var practiceListItem = document.getElementById("practiceListItem");
       if (practiceListItem) {
         practiceListItem.addEventListener("click", function (e) {
+          window.location.href = "practice.html";
+        });
+      }
+
+      var roadmapListItem = document.getElementById("roadmapListItem");
+      if (roadmapListItem) {
+        roadmapListItem.addEventListener("click", function (e) {
+          window.location.href = "./roadmap.html";
+        });
+      }
+
+      var practiceListItem1 = document.getElementById("practiceListItem1");
+      if (practiceListItem1) {
+        practiceListItem1.addEventListener("click", function (e) {
           window.location.href = "practice.html";
         });
       }
@@ -157,20 +176,6 @@
       if (lightLogo) {
         lightLogo.addEventListener("click", function (e) {
           window.location.href = "./home1.html";
-        });
-      }
-
-      var roadmap = document.getElementById("roadmap");
-      if (roadmap) {
-        roadmap.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.html";
-        });
-      }
-
-      var practiceListItem1 = document.getElementById("practiceListItem1");
-      if (practiceListItem1) {
-        practiceListItem1.addEventListener("click", function (e) {
-          window.location.href = "practice.html";
         });
       }
     </script>
