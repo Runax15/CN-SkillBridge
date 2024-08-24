@@ -19,12 +19,11 @@
           <p class="generator">Generator</p>
         </h1>
         <div class="frame11">
-          <input type="text" id="fieldOfStudy" class="input-field1" placeholder="Enter Field" />
+          <input class="input-field1" placeholder="Enter Field" type="text" />
 
-          <!-- <button class="button11">
+          <button class="button11">
             <div class="roadmap6">Generate Course Roadmap</div>
-          </button> -->
-          <button class="button11" onclick="generateRoadmap()">Generate Course Roadmap</button>
+          </button>
         </div>
       </header>
       <main class="body1"></main>
@@ -179,31 +178,6 @@
           window.location.href = "./home1.html";
         });
       }
-
-      async function generateRoadmap() {
-            const fieldOfStudy = document.getElementById('fieldOfStudy').value;
-            if (!fieldOfStudy) {
-                alert('Please enter a field of study');
-                return;
-            }
-
-            const response = await fetch('/generate-roadmap', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ field_of_study: fieldOfStudy })
-            });
-
-            const data = await response.json();
-            const imageDiv = document.getElementById('roadmap-image');
-
-            if (data.error) {
-                imageDiv.innerHTML = `<p style="color: red;">${data.error}</p>`;
-            } else {
-                imageDiv.innerHTML = `<img src="data:image/svg+xml;base64,${data.roadmap_svg}" alt="Course Roadmap">`;
-            }
-        }
       </script>
   </body>
 </html>
