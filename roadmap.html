@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <div class="roadmap5">
+    <!-- <div class="roadmap5">
       <header class="header">
         <h1 class="course-roadmap-generator">
           <p class="course-roadmap2">Course Roadmap</p>
@@ -24,9 +24,208 @@
           <button class="button11">
             <div class="roadmap6">Generate Course Roadmap</div>
           </button>
-        </div>
+        </div> -->
       </header>
-      <main class="body1"></main>
+      <!-- <main class="body1">
+      
+      </main> -->
+      <nav class="navbar2">
+        <ul class="navbar-text2" id="navbar">
+          <li class="roadmap8" id="roadmapListItem">Roadmap</li>
+          <li class="practice8" id="practiceListItem1">Practice</li>
+          <li class="project2">Projects</li>
+          <li class="resources5">Resources</li>
+          <li class="placement5">Placement</li>
+        </ul>
+        <div class="navbar-button2">
+          <button class="sign-in2">
+            <div class="contact-us4">Sign In</div>
+          </button>
+          <button class="sign-up2">
+            <div class="roadmap6">Sign Up</div>
+          </button>
+        </div>
+        <a class="light-logo2" href="./index.html" id="lightLogo">
+          <img
+            class="light-logo-icon2"
+            alt=""
+            src="./public/lightlogo@2x.png"
+            id="lightLogoImage"
+          />
+        </a>
+      </nav>
+      <div class="container">
+        <div class="tabs">
+            <button class="tablinks active" onclick="openTab(event, 'AllRoadmaps')">All Roadmaps</button>
+            <button class="tablinks" onclick="openTab(event, 'Beginner')">Absolute Beginner</button>
+            <button class="tablinks" onclick="openTab(event, 'WebDevelopment')">Web Development</button>
+            <button class="tablinks" onclick="openTab(event, 'Frameworks')">Frameworks</button>
+            <button class="tablinks" onclick="openTab(event, 'Languages')">Languages</button>
+            <button class="tablinks" onclick="openTab(event, 'DevOps')">DevOps</button>
+            <button class="tablinks" onclick="openTab(event, 'Mobile')">Mobile Development</button>
+            <button class="tablinks" onclick="openTab(event, 'Database')">Database</button>
+            <button class="tablinks" onclick="openTab(event, 'CS')">Computer Science</button>
+            <button class="tablinks" onclick="openTab(event, 'ML')">Machine Learning</button>
+            <button class="tablinks" onclick="openTab(event, 'Game')">Game Development</button>
+            <button class="tablinks" onclick="openTab(event, 'Blockchain')">Blockchain</button>
+            <button class="tablinks" onclick="openTab(event, 'Cyber')">Cyber Security</button>
+            <!-- Add the rest of the tab buttons here -->
+        </div>
+
+        <div id="AllRoadmaps" class="tabcontent active">
+            <h3>ROLE BASED ROADMAPS</h3>
+            <button class="item">Frontend Beginner</button>
+            <button class="item">Backend Beginner</button>
+            <button class="item">DevOps Beginner</button>
+            <button class="item">Frontend</button>
+            <button class="item">Backend</button>
+            <button class="item">Full Stack</button>
+            <button class="item">API Design</button>
+            <button class="item">DevOps</button>
+            <button class="item">Android</button>
+            <button class="item">iOS</button>
+            <button class="item">PostgreSQL</button>
+            <button class="item">Machine Learning</button>
+            <button class="item">AI and Data Science</button>
+            <button class="item">Data Analyst</button>
+            <button class="item">Blockchain</button>
+            <button class="item">Client Side Game Dev</button>
+            <button class="item">Server Side Game Dev</button>
+            <button class="item">Cyber Security</button>
+            <!-- Add more items for role-based roadmaps -->
+
+            <h3>SKILL BASED ROADMAPS</h3>
+            <button class="item">GraphQL</button>
+            <button class="item">Git and GitHub</button>
+            <button class="item">React</button>
+            <button class="item">Vue</button>
+            <button class="item">Angular</button>
+            <button class="item">Spring Boot</button>
+            <button class="item">ASP.NET Core</button>
+            <button class="item">JavaScript</button>
+            <button class="item">TypeScript</button>
+            <button class="item">Node.js</button>
+            <button class="item">Go</button>
+            <button class="item">Rust</button>
+            <button class="item">Python</button>
+            <button class="item">Java</button>
+            <button class="item">SQL</button>
+            <button class="item">Docker</button>
+            <button class="item">Kubernetes</button>
+            <button class="item">AWS</button>
+            <button class="item">Linux</button>
+            <button class="item">Terraform</button>
+            <button class="item">React Native</button>
+            <button class="item">Flutter</button>
+            <button class="item">MongoDB</button>
+            <button class="item">Computer Science</button>
+            <button class="item">Data Structures</button>
+            <button class="item">System Design</button>
+            <button class="item">Design and Architecture</button>
+            <button class="item">Prompt Engineering</button>
+            <!-- Add more items for skill-based roadmaps -->
+        </div>
+
+        <div id="Beginner" class="tabcontent">
+            <h3>ABSOLUTE BEGINNER</h3>
+            <button class="item">Frontend Beginner</button>
+            <button class="item">Backend Beginner</button>
+            <button class="item">DevOps Beginner</button>
+        </div>
+
+        <div id="WebDevelopment" class="tabcontent">
+            <h3>WEB DEVELOPMENT</h3>
+            <button class="item">Frontend</button>
+            <button class="item">Backend</button>
+            <button class="item">Full Stack</button>
+            <button class="item">API Design</button>
+            <button class="item">Git and GitHub</button>
+            <!-- Add items for Web Development -->
+        </div>
+
+        <div id="Frameworks" class="tabcontent">
+            <h3>FRAMEWORKS</h3>
+            <button class="item">React</button>
+            <button class="item">Vue</button>
+            <button class="item">Angular</button>
+            <button class="item">Spring Boot</button>
+            <button class="item">ASP.NET Core</button>
+        </div>
+
+        <div id="Languages" class="tabcontent">
+            <h3>LANGUAGES</h3>
+            <button class="item">JavaScript</button>
+            <button class="item">TypeScript</button>
+            <button class="item">Node.js</button>
+            <button class="item">Go</button>
+            <button class="item">Rust</button>
+            <button class="item">Python</button>
+            <button class="item">Java</button>
+            <button class="item">SQL</button>
+        </div>
+
+        <div id="DevOps" class="tabcontent">
+            <h3>DEVOPS</h3>
+            <button class="item">DevOps</button>
+            <button class="item">Docker</button>
+            <button class="item">Kubernetes</button>
+            <button class="item">AWS</button>
+            <button class="item">Linux</button>
+            <button class="item">Terraform</button>
+        </div>
+
+        <div id="Mobile" class="tabcontent">
+            <h3>MOBILE DEVELOPMENT</h3>
+            <button class="item">Android</button>
+            <button class="item">iOS</button>
+            <button class="item">React Native</button>
+            <button class="item">Flutter</button>
+            <h3>LANGUAGES</h3>
+            <button class="item">JavaScript</button>
+            <button class="item">TypeScript</button>
+        </div>
+
+        <div id="Database" class="tabcontent">
+            <h3>DATABASES</h3>
+            <button class="item">PostgreSQL</button>
+            <button class="item">MongoDB</button>
+            <h3>LANGUAGES</h3>
+            <button class="item">SQL</button>
+        </div>
+
+        <div id="CS" class="tabcontent">
+            <h3>COMPUTER SCIENCE</h3>
+            <button class="item">Computer Science</button>
+            <button class="item">Data Structures</button>
+            <button class="item">System Design</button>
+            <button class="item">Design and Architecture</button>
+        </div>
+
+        <div id="ML" class="tabcontent">
+            <h3>MACHINE LEARNING</h3>
+            <button class="item">Machine Learning</button>
+            <button class="item">AI and Data Science</button>
+            <button class="item">Data Analyst</button>
+            <button class="item">Prompt Engineering</button>
+        </div>
+
+        <div id="Game" class="tabcontent">
+            <h3>GAME DEVELOPMENT</h3>
+            <button class="item">Client Side Game Dev</button>
+            <button class="item">Server Side Game Dev</button>
+        </div>
+
+        <div id="Blockchain" class="tabcontent">
+            <h3>BLOCKCHAIN</h3>
+            <button class="item">Blockchain</button>
+        </div>
+
+        <div id="Cyber" class="tabcontent">
+            <h3>CYBER SECURITY</h3>
+            <button class="item">Cyber Security</button>
+        </div>
+        <!-- Continue to add other tab contents -->
+    <!-- </div> -->
       <footer class="footer2">
         <div class="company-info2">
           <header class="logo2">
@@ -109,31 +308,7 @@
           </div>
         </div>
       </footer>
-      <nav class="navbar2">
-        <ul class="navbar-text2" id="navbar">
-          <li class="roadmap8" id="roadmapListItem">Roadmap</li>
-          <li class="practice8" id="practiceListItem1">Practice</li>
-          <li class="project2">Projects</li>
-          <li class="resources5">Resources</li>
-          <li class="placement5">Placement</li>
-        </ul>
-        <div class="navbar-button2">
-          <button class="sign-in2">
-            <div class="contact-us4">Sign In</div>
-          </button>
-          <button class="sign-up2">
-            <div class="roadmap6">Sign Up</div>
-          </button>
-        </div>
-        <a class="light-logo2" href="./home1.html" id="lightLogo">
-          <img
-            class="light-logo-icon2"
-            alt=""
-            src="./public/lightlogo@2x.png"
-            id="lightLogoImage"
-          />
-        </a>
-      </nav>
+      
     </div>
 
     <script>
@@ -143,41 +318,59 @@
           window.location.href = "./roadmap.html";
         });
       }
-      
+
       var practiceListItem = document.getElementById("practiceListItem");
       if (practiceListItem) {
         practiceListItem.addEventListener("click", function (e) {
           window.location.href = "practice.html";
         });
       }
-      
+
       var roadmapListItem = document.getElementById("roadmapListItem");
       if (roadmapListItem) {
         roadmapListItem.addEventListener("click", function (e) {
           window.location.href = "./roadmap.html";
         });
       }
-      
+
       var practiceListItem1 = document.getElementById("practiceListItem1");
       if (practiceListItem1) {
         practiceListItem1.addEventListener("click", function (e) {
           window.location.href = "practice.html";
         });
       }
-      
+
       var lightLogoImage = document.getElementById("lightLogoImage");
       if (lightLogoImage) {
         lightLogoImage.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
+          window.location.href = "./index.html";
         });
       }
-      
+
       var lightLogo = document.getElementById("lightLogo");
       if (lightLogo) {
         lightLogo.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
+          window.location.href = "./index.html";
         });
       }
-      </script>
+      function openTab(evt, tabName) {
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".tablinks.active").click();
+        });
+    </script>
   </body>
 </html>
