@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 100px;
+        }
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-container h1 {
+            margin: 0;
+            color: #354A5F;
+        }
+        .download-button {
+            padding: 10px 20px;
+            background-color: #354A5F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #354A5F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+            text-align: left;
+            margin: 0px 100px 25px 100px;
+        }
+        .download-button:hover, .back-button:hover {
+            background-color: #19be9d;
+            color: #354A5F;
+        }
+        
+        .roadmap-container {
+            text-align: center;
+            padding: 0 100px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="header-row">
+            <h1 id="roadmap-title">Roadmap</h1>
+            <a id="download-button" href="" class="download-button" download>Download Roadmap</a>
+        </div>
+        
+    </div>
+    <a id="back-button" href="roadmap.html" class="back-button">← Back to Roadmaps</a>
+    <div class="roadmap-container">
+        <img id="roadmap-image" src="" alt="Roadmap" />
+    </div>
+
+    <script>
+        // Function to get query parameters from URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Mapping of roadmap types to corresponding SVG and PDF file paths
+        const roadmaps = {
+            frontend: {svg: './roadmaps/frontend.svg', pdf: './roadmaps/pdf/frontend.pdf'},
+            backend: {svg: './roadmaps/backend.svg', pdf: './roadmaps/pdf/backend.pdf'},
+            'full-stack': {svg: './roadmaps/full-stack.svg', pdf: './roadmaps/pdf/full-stack.pdf'},
+            'api-design': {svg: './roadmaps/api-design.svg', pdf: './roadmaps/pdf/api-design.pdf'},
+            devops: {svg: './roadmaps/devops.svg', pdf: './roadmaps/pdf/devops.pdf'},
+            android: {svg: './roadmaps/android.svg', pdf: './roadmaps/pdf/android.pdf'},
+            ios: {svg: './roadmaps/ios.svg', pdf: './roadmaps/pdf/ios.pdf'},
+            postgresql: {svg: './roadmaps/postgresql.svg', pdf: './roadmaps/pdf/postgresql.pdf'},
+            'machine-learning': {svg: './roadmaps/machine-learning.svg', pdf: './roadmaps/pdf/machine-learning.pdf'},
+            'ai-data-science': {svg: './roadmaps/ai-data-scientist.svg', pdf: './roadmaps/pdf/ai-data-scientist.pdf'},
+            'data-analyst': {svg: './roadmaps/data-analyst.svg', pdf: './roadmaps/pdf/data-analyst.pdf'},
+            'ux-design': {svg: './roadmaps/ux-design.svg', pdf: './roadmaps/pdf/ux-design.pdf'},
+            blockchain: {svg: './roadmaps/blockchain.svg', pdf: './roadmaps/pdf/blockchain.pdf'},
+            'client-side-game-dev': {svg: './roadmaps/client-side-game-developer.svg', pdf: './roadmaps/pdf/client-side-game-developer.pdf'},
+            'server-side-game-dev': {svg: './roadmaps/server-side-game-developer.svg', pdf: './roadmaps/pdf/server-side-game-developer.pdf'},
+            'cyber-security': {svg: './roadmaps/cyber-security.svg', pdf: './roadmaps/pdf/cyber-security.pdf'},
+            graphql: {svg: './roadmaps/graphql.svg', pdf: './roadmaps/pdf/graphql.pdf'},
+            'git-github': {svg: './roadmaps/git-github.svg', pdf: './roadmaps/pdf/git-github.pdf'},
+            react: {svg: './roadmaps/react.svg', pdf: './roadmaps/pdf/react.pdf'},
+            vue: {svg: './roadmaps/vue.svg', pdf: './roadmaps/pdf/vue.pdf'},
+            angular: {svg: './roadmaps/angular.svg', pdf: './roadmaps/pdf/angular.pdf'},
+            'spring-boot': {svg: './roadmaps/spring-boot.svg', pdf: './roadmaps/pdf/spring-boot.pdf'},
+            'asp-net-core': {svg: './roadmaps/aspnet-core.svg', pdf: './roadmaps/pdf/aspnet-core.pdf'},
+            javascript: {svg: './roadmaps/javascript.svg', pdf: './roadmaps/pdf/javascript.pdf'},
+            typescript: {svg: './roadmaps/typescript.svg', pdf: './roadmaps/pdf/typescript.pdf'},
+            'node-js': {svg: './roadmaps/nodejs.svg', pdf: './roadmaps/pdf/nodejs.pdf'},
+            go: {svg: './roadmaps/golang.svg', pdf: './roadmaps/pdf/golang.pdf'},
+            rust: {svg: './roadmaps/rust.svg', pdf: './roadmaps/pdf/rust.pdf'},
+            python: {svg: './roadmaps/python.svg', pdf: './roadmaps/pdf/python.pdf'},
+            java: {svg: './roadmaps/java.svg', pdf: './roadmaps/pdf/java.pdf'},
+            sql: {svg: './roadmaps/sql.svg', pdf: './roadmaps/pdf/sql.pdf'},
+            docker: {svg: './roadmaps/docker.svg', pdf: './roadmaps/pdf/docker.pdf'},
+            kubernetes: {svg: './roadmaps/kubernetes.svg', pdf: './roadmaps/pdf/kubernetes.pdf'},
+            aws: {svg: './roadmaps/aws.svg', pdf: './roadmaps/pdf/aws.pdf'},
+            linux: {svg: './roadmaps/linux.svg', pdf: './roadmaps/pdf/linux.pdf'},
+            'react-native': {svg: './roadmaps/react-native.svg', pdf: './roadmaps/pdf/react-native.pdf'},
+            flutter: {svg: './roadmaps/flutter.svg', pdf: './roadmaps/pdf/flutter.pdf'},
+            mongodb: {svg: './roadmaps/mongodb.svg', pdf: './roadmaps/pdf/mongodb.pdf'},
+            'computer-science': {svg: './roadmaps/computer-science.svg', pdf: './roadmaps/pdf/computer-science.pdf'},
+            'data-structures': {svg: './roadmaps/datastructures-and-algorithms.svg', pdf: './roadmaps/pdf/datastructures-and-algorithms.pdf'},
+            'system-design': {svg: './roadmaps/system-design.svg', pdf: './roadmaps/pdf/system-design.pdf'},
+            'design-architecture': {svg: './roadmaps/design-architecture.svg', pdf: './roadmaps/pdf/design-architecture.pdf'},
+            'prompt-engineering': {svg: './roadmaps/prompt-engineering.svg', pdf: './roadmaps/pdf/prompt-engineering.pdf'}
+        };
+
+        // Get the roadmap type from the query parameter
+        const roadmapType = getQueryParam('roadmap');
+
+        if (roadmapType && roadmaps[roadmapType]) {
+            // Set the title dynamically
+            document.getElementById('roadmap-title').textContent = roadmapType.replace(/-/g, ' ').toUpperCase() + ' ROADMAP';
+
+            // Set the image source dynamically
+            document.getElementById('roadmap-image').src = roadmaps[roadmapType].svg;
+
+            // Set the download link for the corresponding PDF
+            document.getElementById('download-button').href = roadmaps[roadmapType].pdf;
+        } else {
+            document.getElementById('roadmap-title').textContent = 'Roadmap Not Found';
+            document.getElementById('roadmap-image').alt = 'Roadmap Not Available';
+            document.getElementById('download-button').style.display = 'none';  // Hide the download button if no roadmap is found
+        }
+    </script>
+
+</body>
+</html>
