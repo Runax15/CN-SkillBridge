@@ -237,15 +237,15 @@
       }
 
       .cls-59 {
-        letter-spacing: 0em;
-      }
-
-      .cls-60 {
         letter-spacing: -0.02em;
       }
 
-      .cls-61 {
+      .cls-60 {
         letter-spacing: -0.01em;
+      }
+
+      .cls-61 {
+        letter-spacing: 0em;
       }
 
       .cls-62 {
@@ -261,15 +261,15 @@
       }
 
       .cls-65 {
-        clip-path: url(#clip-path-24);
-      }
-
-      .cls-66 {
         letter-spacing: -0.01em;
       }
 
+      .cls-66 {
+        clip-path: url(#clip-path-24);
+      }
+
       .cls-67 {
-        letter-spacing: -0.02em;
+        letter-spacing: -0.01em;
       }
 
       .cls-68 {
@@ -277,7 +277,7 @@
       }
 
       .cls-69 {
-        letter-spacing: 0em;
+        letter-spacing: -0.01em;
       }
 
       .cls-70 {
@@ -1384,10 +1384,10 @@
     <polygon points="33.67 79.17 34.59 79.24 34.59 80.13 32.61 80.07 32.59 79.43 32.51 78.48 33.57 78.48 33.57 78.72 33.67 79.17"/>
     <polygon points="33.73 42.54 33.7 66.49 33.57 75.97 33.57 78.58 32.51 78.58 32.5 78.41 32.5 72.6 32.75 62.64 32.76 52.02 32.58 42.54 33.73 42.54"/>
   </g>
-  <text class="cls-56" transform="translate(46.67 57.6)">F<tspan class="cls-57" x="5.96" y="0">r</tspan><tspan x="9.38" y="0">on</tspan><tspan class="cls-58" x="20.7" y="0">t</tspan><tspan class="cls-59" x="23.68" y="0">end Roadmap till F</tspan><tspan class="cls-60" x="108.83" y="0">r</tspan><tspan class="cls-59" x="112.24" y="0">ame</tspan><tspan class="cls-61" x="132.1" y="0">w</tspan><tspan x="138.75" y="0">ork</tspan><tspan class="cls-57" x="152.94" y="0"> </tspan><tspan x="155.45" y="0">Se</tspan><tspan class="cls-61" x="167.43" y="0">l</tspan><tspan class="cls-59" x="169.6" y="0">ection</tspan></text>
-  <text class="cls-62" transform="translate(116.26 70.63)"><tspan class="cls-63">r</tspan><tspan x="2.56" y="0">oadma</tspan><tspan class="cls-64" x="25.81" y="0">p</tspan><tspan x="29.91" y="0">.sh/f</tspan><tspan class="cls-63" x="44.94" y="0">r</tspan><tspan x="47.49" y="0">on</tspan><tspan class="cls-58" x="55.98" y="0">t</tspan><tspan x="58.22" y="0">end</tspan></text>
+  <text class="cls-56" transform="translate(46.67 57.6)">F<tspan class="cls-57" x="5.96" y="0">r</tspan><tspan x="9.38" y="0">on</tspan><tspan class="cls-58" x="20.7" y="0">t</tspan><tspan x="23.68" y="0">end Roadmap till F</tspan><tspan class="cls-59" x="108.83" y="0">r</tspan><tspan x="112.24" y="0">ame</tspan><tspan class="cls-60" x="132.1" y="0">w</tspan><tspan x="138.75" y="0">ork</tspan><tspan class="cls-57" x="152.94" y="0"> </tspan><tspan class="cls-61" x="155.45" y="0">Se</tspan><tspan class="cls-60" x="167.43" y="0">l</tspan><tspan x="169.6" y="0">ection</tspan></text>
+  <text class="cls-62" transform="translate(116.26 70.63)"><tspan class="cls-63">r</tspan><tspan x="2.56" y="0">oadma</tspan><tspan class="cls-64" x="25.81" y="0">p</tspan><tspan x="29.91" y="0">/f</tspan><tspan class="cls-63" x="35.61" y="0">r</tspan><tspan x="38.17" y="0">on</tspan><tspan class="cls-65" x="46.66" y="0">t</tspan><tspan x="48.9" y="0">end</tspan></text>
   <rect class="cls-1" width="430" height="841.89"/>
-  <g class="cls-65">
+  <g class="cls-66">
     <rect class="cls-55" x="110.43" y="765.63" width="239.19" height="42.92"/>
     <polygon points="111.24 767.3 110.09 767.3 110.08 767.16 110.06 766.15 110.5 765.33 112.09 765.28 112.09 766.4 111.25 766.41 111.24 767.3"/>
     <polygon points="111.99 766.4 111.99 765.28 152.92 765.22 229.07 765.22 348.06 765.54 348.06 766.36 319.74 766.4 306.41 766.25 286.9 766.38 234.78 766.38 200.28 766.26 159.82 766.38 111.99 766.4"/>
@@ -1398,8 +1398,8 @@
     <polygon points="111.18 807.58 112.09 807.65 112.09 808.54 110.11 808.48 110.1 807.84 110.01 806.89 111.08 806.89 111.08 807.13 111.18 807.58"/>
     <polygon points="111.24 767.2 111.21 793.64 111.08 804.11 111.08 806.99 110.01 806.99 110.01 806.79 110.01 800.38 110.26 789.38 110.27 777.67 110.09 767.2 111.24 767.2"/>
   </g>
-  <text class="cls-56" transform="translate(126.68 783.93)">F<tspan class="cls-57" x="5.96" y="0">r</tspan><tspan x="9.38" y="0">on</tspan><tspan class="cls-58" x="20.7" y="0">t</tspan><tspan class="cls-59" x="23.68" y="0">end Roadmap af</tspan><tspan class="cls-66" x="99.05" y="0">t</tspan><tspan x="102.03" y="0">er F</tspan><tspan class="cls-67" x="120.23" y="0">r</tspan><tspan x="123.64" y="0">ame</tspan><tspan class="cls-68" x="143.5" y="0">w</tspan><tspan x="150.15" y="0">ork</tspan><tspan class="cls-57" x="164.34" y="0"> </tspan><tspan x="166.85" y="0">Se</tspan><tspan class="cls-61" x="178.83" y="0">l</tspan><tspan class="cls-69" x="181.01" y="0">ection</tspan></text>
-  <text class="cls-62" transform="translate(195.44 796.96)"><tspan class="cls-63">r</tspan><tspan x="2.56" y="0">oadma</tspan><tspan class="cls-64" x="25.81" y="0">p</tspan><tspan x="29.91" y="0">/f</tspan><tspan class="cls-63" x="35.61" y="0">r</tspan><tspan x="38.17" y="0">on</tspan><tspan class="cls-58" x="46.66" y="0">t</tspan><tspan x="48.9" y="0">end</tspan></text>
+  <text class="cls-56" transform="translate(126.68 783.93)">F<tspan class="cls-57" x="5.96" y="0">r</tspan><tspan x="9.38" y="0">on</tspan><tspan class="cls-58" x="20.7" y="0">t</tspan><tspan class="cls-61" x="23.68" y="0">end Roadmap af</tspan><tspan class="cls-67" x="99.05" y="0">t</tspan><tspan x="102.03" y="0">er F</tspan><tspan class="cls-59" x="120.23" y="0">r</tspan><tspan x="123.64" y="0">ame</tspan><tspan class="cls-68" x="143.5" y="0">w</tspan><tspan class="cls-61" x="150.15" y="0">ork</tspan><tspan class="cls-57" x="164.34" y="0"> </tspan><tspan x="166.85" y="0">Se</tspan><tspan class="cls-69" x="178.84" y="0">l</tspan><tspan x="181.01" y="0">ection</tspan></text>
+  <text class="cls-62" transform="translate(195.44 796.96)"><tspan class="cls-63">r</tspan><tspan x="2.56" y="0">oadma</tspan><tspan class="cls-64" x="25.81" y="0">p</tspan><tspan x="29.91" y="0">/f</tspan><tspan class="cls-63" x="35.61" y="0">r</tspan><tspan x="38.17" y="0">on</tspan><tspan class="cls-65" x="46.66" y="0">t</tspan><tspan x="48.9" y="0">end</tspan></text>
   <rect class="cls-1" width="430" height="841.89"/>
   <g class="cls-70">
     <rect class="cls-21" x="10" y="179.32" width="43.34" height="18.34"/>
