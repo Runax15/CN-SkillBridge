@@ -187,7 +187,7 @@
         <ul class="navbar-text" id="navbar">
           <li class="roadmap1" id="roadmapListItem">Roadmap</li>
           <li class="practice2" id="practiceListItem1">Practice</li>
-          <li class="project">Projects</li>
+          <li class="project" id="projectListItem1">Projects</li>
           <li class="resources1">Resources</li>
           <li class="placement1">Placement</li>
         </ul>
@@ -199,7 +199,7 @@
             <div class="start1">Sign Up</div>
           </button>
         </div>
-        <a class="light-logo" href="./home1.html" id="lightLogo">
+        <a class="light-logo" href="./index.html" id="lightLogo">
           <img
             class="light-logo-icon"
             alt=""
@@ -232,24 +232,24 @@
         });
       }
 
-      var practiceListItem1 = document.getElementById("practiceListItem1");
+      var practiceListItem1 = document.getElementById("projectListItem1");
       if (practiceListItem1) {
         practiceListItem1.addEventListener("click", function (e) {
-          window.location.href = "practice.html";
+          window.location.href = "./project.html";
         });
       }
 
       var lightLogoImage = document.getElementById("lightLogoImage");
       if (lightLogoImage) {
         lightLogoImage.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
+          window.location.href = "./index.html";
         });
       }
 
       var lightLogo = document.getElementById("lightLogo");
       if (lightLogo) {
         lightLogo.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
+          window.location.href = "./index.html";
         });
       }
     </script>
