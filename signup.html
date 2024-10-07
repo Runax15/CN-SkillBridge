@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="signup.css">
+
+    <!-- Iconscout CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>Student Registration</header>
+
+        <!-- Updated form to avoid unnecessary client-side validation issues -->
+        <form id="registrationForm" action="submit.php" method="POST" onsubmit="return handleSubmit(event);">
+            <!-- First Form Section -->
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" id="full_name" name="full_name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="personal_email">Personal Email</label>
+                            <input type="email" id="personal_email" name="personal_email" placeholder="Enter your personal email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="mobile_number">Mobile Number</label>
+                            <input type="tel" id="mobile_number" name="mobile_number" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- College Details Section -->
+                <div class="details ID">
+                    <span class="title">College Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="prn_no">PRN No</label>
+                            <input type="text" id="prn_no" name="prn_no" placeholder="Enter PRN No" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="year">Year</label>
+                            <select id="year" name="year" required>
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="first">First Year</option>
+                                <option value="second">Second Year</option>
+                                <option value="third">Third Year</option>
+                                <option value="fourth">Fourth Year</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="branch">Branch</label>
+                            <select id="branch" name="branch" required>
+                                <option value="" disabled selected>Select Branch</option>
+                                <option value="cs">CS</option>
+                                <option value="it">IT</option>
+                                <option value="cse_ai">CSE (AI)</option>
+                                <option value="cse_aiml">CSE (AIML)</option>
+                                <option value="aids">AIDS</option>
+                                <option value="entc">ENTC</option>
+                                <option value="mech">Mech</option>
+                                <option value="instru">Instru</option>
+                                <option value="chem">Chem</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="college">College</label>
+                            <select id="college" name="college" required>
+                                <option value="" disabled selected>Select College</option>
+                                <option value="vit">VIT</option>
+                                <option value="viit">VIIT</option>
+                                <option value="vu">VU</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="college_email">College Email</label>
+                            <input type="email" id="college_email" name="college_email" placeholder="Enter your college email" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = document.getElementById('registrationForm');
+            const formData = new FormData(form);
+
+            fetch('submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message); // Show success message
+                } else {
+                    alert('An error occurred. Please try again.'); // Show error message if status is not success
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        }
+    </script>
+
+</body>
+</html>

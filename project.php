@@ -12,92 +12,7 @@
     />
   </head>
   <body>
-    <footer class="footer3">
-      <div class="company-info3">
-        <header class="logo3">
-          <div class="dark-logo3">
-            <img
-              class="screenshot-2024-08-18-at-4116"
-              alt=""
-              src="./public/screenshot-20240818-at-41103-pm-1@2x.png"
-            />
-
-            <div class="frame16">
-              <div class="frame17">
-                <img
-                  class="screenshot-2024-08-18-at-4083"
-                  alt=""
-                  src="./public/screenshot-20240818-at-40856-pm-1@2x.png"
-                />
-              </div>
-              <div class="frame18">
-                <img
-                  class="screenshot-2024-08-18-at-4117"
-                  alt=""
-                  src="./public/screenshot-20240818-at-41103-pm-2@2x.png"
-                />
-              </div>
-            </div>
-          </div>
-        </header>
-        <div class="copyright3">
-          <p class="copyright-20243">Copyright © 2024. All rights reserved</p>
-        </div>
-        <div class="social-links3">
-          <img
-            class="social-icons12"
-            alt=""
-            src="./public/social-icons.svg"
-          />
-
-          <img
-            class="social-icons12"
-            alt=""
-            src="./public/social-icons1.svg"
-          />
-
-          <img
-            class="social-icons12"
-            alt=""
-            src="./public/social-icons2.svg"
-          />
-
-          <img
-            class="social-icons12"
-            alt=""
-            src="./public/social-icons3.svg"
-          />
-        </div>
-      </div>
-      <div class="links3">
-        <div class="col-13">
-          <h4 class="company3">Company</h4>
-          <ul class="list-items6">
-            <a class="roadmap9" href="./roadmap.php" id="roadmap">Roadmap</a>
-            <li class="practice9" id="practiceListItem">Practice</li>
-            <li class="projects3">Projects</li>
-            <li class="projects3">Resources</li>
-            <li class="projects3">Placement</li>
-          </ul>
-        </div>
-        <div class="col-13">
-          <h4 class="company3">Support</h4>
-          <ul class="list-items6">
-            <li class="projects3">Community</li>
-            <li class="projects3">Forums</li>
-            <li class="projects3">FAQs</li>
-          </ul>
-        </div>
-        <div class="col-33">
-          <h4 class="company3">Stay up to date</h4>
-          <input
-            class="frame19"
-            placeholder="Your email address"
-            type="text"
-          />
-        </div>
-      </div>
-    </footer>
+  
       <main class="main">
          <!-- Category List -->
         <section class="pro">
@@ -140,31 +55,8 @@
           />
         </div>
       </header>
-      <nav class="navbar3">
-        <ul class="navbar-text3" id="navbar">
-          <li class="roadmap10" id="roadmapListItem">Roadmap</li>
-          <li class="practice10" id="practiceListItem1">Practice</li>
-          <li class="project3">Projects</li>
-          <li class="resources7">Resources</li>
-          <li class="placement7">Placement</li>
-        </ul>
-        <div class="navbar-button3">
-          <button class="sign-in3">
-            <div class="contact-us6">Sign In</div>
-          </button>
-          <button class="sign-up3">
-            <div class="contact-us7">Sign Up</div>
-          </button>
-        </div>
-        <a class="light-logo3" href="./index.php" id="lightLogo">
-          <img
-            class="light-logo-icon3"
-            alt=""
-            src="./public/lightlogo@2x.png"
-            id="lightLogoImage"
-          />
-        </a>
-      </nav>
+      <?php include 'foot.php';?>
+      <?php include 'navbar.php'; ?>
 
     <script>
       // Data for projects
@@ -428,91 +320,56 @@ const projectData = {
         ]
 };
 
-// Populate the project category dropdown
-const categoryDropdown = document.getElementById('project-category');
-Object.keys(projectData).forEach(category => {
-    const option = document.createElement('option');
-    option.value = category;
-    option.textContent = category;
-    categoryDropdown.appendChild(option);
-});
-
-// Populate the table based on selected category
-categoryDropdown.addEventListener('change', function() {
-    const selectedCategory = categoryDropdown.value;
-    const projectTableBody = document.getElementById('project-table').getElementsByTagName('tbody')[0];
-    
-    // Clear any existing rows
-    projectTableBody.innerHTML = '';
-
-    // Iterate through selected category projects and add rows
-    projectData[selectedCategory].forEach(project => {
-        const row = document.createElement('tr');
-
-        // Create and append title cell
-        const titleCell = document.createElement('td');
-        titleCell.textContent = project.title;
-        row.appendChild(titleCell);
-
-        // Create and append description cell
-        const descriptionCell = document.createElement('td');
-        descriptionCell.textContent = project.description;
-        row.appendChild(descriptionCell);
-
-        // Create and append link cell
-        const linkCell = document.createElement('td');
-        const link = document.createElement('a');
-        link.href = project.link;
-        link.target = '_blank'; // Open in new tab
-        link.textContent = "View Project";
-        linkCell.appendChild(link);
-        row.appendChild(linkCell);
-
-        // Append row to table
-        projectTableBody.appendChild(row);
-    });
-});
-      var roadmap = document.getElementById("roadmap");
-      if (roadmap) {
-        roadmap.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.php";
+        // Populate the project category dropdown
+        const categoryDropdown = document.getElementById('project-category');
+        Object.keys(projectData).forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categoryDropdown.appendChild(option);
         });
-      }
-      
-      var practiceListItem = document.getElementById("practiceListItem");
-      if (practiceListItem) {
-        practiceListItem.addEventListener("click", function (e) {
-          window.location.href = "./practice.php";
+
+        // Set default selected category
+        categoryDropdown.value = "Build your own Blockchain / Cryptocurrency";
+
+        // Populate the table based on selected category
+        categoryDropdown.addEventListener('change', function() {
+            const selectedCategory = categoryDropdown.value;
+            const projectTableBody = document.getElementById('project-table').getElementsByTagName('tbody')[0];
+            
+            // Clear any existing rows
+            projectTableBody.innerHTML = '';
+
+            // Iterate through selected category projects and add rows
+            projectData[selectedCategory].forEach(project => {
+                const row = document.createElement('tr');
+
+                // Create and append title cell
+                const titleCell = document.createElement('td');
+                titleCell.textContent = project.title;
+                row.appendChild(titleCell);
+
+                // Create and append description cell
+                const descriptionCell = document.createElement('td');
+                descriptionCell.textContent = project.description;
+                row.appendChild(descriptionCell);
+
+                // Create and append link cell
+                const linkCell = document.createElement('td');
+                const link = document.createElement('a');
+                link.href = project.link;
+                link.target = '_blank'; // Open in new tab
+                link.textContent = "View Project";
+                linkCell.appendChild(link);
+                row.appendChild(linkCell);
+
+                // Append row to table
+                projectTableBody.appendChild(row);
+            });
         });
-      }
-      
-      var roadmapListItem = document.getElementById("roadmapListItem");
-      if (roadmapListItem) {
-        roadmapListItem.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.php";
-        });
-      }
-      
-      var practiceListItem1 = document.getElementById("projectListItem1");
-      if (practiceListItem1) {
-        practiceListItem1.addEventListener("click", function (e) {
-          window.location.href = "./project.php";
-        });
-      }
-      
-      var lightLogoImage = document.getElementById("lightLogoImage");
-      if (lightLogoImage) {
-        lightLogoImage.addEventListener("click", function (e) {
-          window.location.href = "./index.php";
-        });
-      }
-      
-      var lightLogo = document.getElementById("lightLogo");
-      if (lightLogo) {
-        lightLogo.addEventListener("click", function (e) {
-          window.location.href = "./index.php";
-        });
-      }
+
+        // Trigger the change event to load the default selected category's projects
+        categoryDropdown.dispatchEvent(new Event('change'));
     </script>
   </body>
 </html>

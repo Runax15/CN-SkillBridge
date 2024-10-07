@@ -478,6 +478,7 @@
   color: #1e2d3e; /* Dark grey heading */
   border-bottom: 2px solid #19be9d5d; /* Bottom border for the heading */
   padding-bottom: 10px;
+  padding-top: 25px;
   margin-bottom: 20px;
 }
 
