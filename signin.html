@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="signin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Login Form</header>
+    <!-- Ensure that the action points to the correct PHP script, and the method is POST -->
+    <form id="loginForm" action="signin.php" method="POST" onsubmit="return handleLogin(event);">
+      <!-- Email Field -->
+      <div class="field email">
+        <div class="input-area">
+          <input type="email" name="college_email" placeholder="College Email Address" required>
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email can't be blank</div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" name="password" placeholder="Password" required>
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password can't be blank</div>
+      </div>
+
+      <!-- Forgot Password Text -->
+      <div class="pass-txt"><a href="#">Forgot password?</a></div>
+      
+      <!-- Submit Button -->
+      <input type="submit" value="Login">
+    </form>
+
+    <!-- Link to Signup Page -->
+    <div class="sign-txt">Not yet a member? <a href="signup.html">Signup now</a></div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const form = document.getElementById('loginForm');
+        const formData = new FormData(form);
+
+        fetch('signin.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Check for success or error
+            if (data.status === 'success') {
+                alert('You have successfully logged in!'); // Show success message
+                window.location.href = "index.php"; // Redirect to dashboard
+            } else {
+                alert('Login failed: ' + data.message); // Show error message
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
+    }
+  </script>
+</body>
+</html>

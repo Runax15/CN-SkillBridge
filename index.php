@@ -12,6 +12,7 @@
     />
   </head>
   <body>
+    
     <div class="home">
       <header class="hero" data-scroll-to="hero">
         <div class="heading-parent">
@@ -110,6 +111,7 @@
             </div>
           </div>
         </section>
+        
         <section class="info">
           <div class="img">
             <img
@@ -137,153 +139,11 @@
             </div>
           </div>
         </section>
+        
       </main>
-      <footer class="footer1">
-        <div class="company-info1">
-          <header class="logo1">
-            <header class="dark-logo1">
-              <img
-                class="screenshot-2024-08-18-at-4112"
-                alt=""
-                src="./public/screenshot-20240818-at-41103-pm-1@2x.png"
-              />
-
-              <div class="frame7">
-                <div class="frame8">
-                  <img
-                    class="screenshot-2024-08-18-at-4081"
-                    alt=""
-                    src="./public/screenshot-20240818-at-40856-pm-1@2x.png"
-                  />
-                </div>
-                <div class="frame9">
-                  <img
-                    class="screenshot-2024-08-18-at-4113"
-                    alt=""
-                    src="./public/screenshot-20240818-at-41103-pm-2@2x.png"
-                  />
-                </div>
-              </div>
-            </header>
-          </header>
-          <div class="copyright1">
-            <p class="copyright-20241">Copyright © 2024. All rights reserved</p>
-          </div>
-          <div class="social-links1">
-            <img class="social-icons4" alt="" src="./public/social-icons.svg" />
-
-            <img
-              class="social-icons4"
-              alt=""
-              src="./public/social-icons1.svg"
-            />
-
-            <img
-              class="social-icons4"
-              alt=""
-              src="./public/social-icons2.svg"
-            />
-
-            <img
-              class="social-icons4"
-              alt=""
-              src="./public/social-icons3.svg"
-            />
-          </div>
-        </div>
-        <div class="links1">
-          <div class="col-11">
-            <h4 class="company1">Company</h4>
-            <ul class="list-items2">
-              <li class="roadmap3" id="roadmapListItem">Roadmap</li>
-              <li class="roadmap3" id="practiceListItem">Practice</li>
-              <li class="projects1">Projects</li>
-              <li class="projects1">Resources</li>
-              <li class="projects1">Placement</li>
-            </ul>
-          </div>
-          <div class="col-11">
-            <h4 class="company1">Support</h4>
-            <ul class="list-items2">
-              <li class="projects1">Community</li>
-              <li class="projects1">Forums</li>
-              <li class="projects1">FAQs</li>
-            </ul>
-          </div>
-          <div class="col-31">
-            <h4 class="company1">Stay up to date</h4>
-            <input
-              class="frame10"
-              placeholder="Your email address"
-              type="text"
-            />
-          </div>
-        </div>
-      </footer>
-      <nav class="navbar1">
-        <ul class="navbar-text1" id="navbar">
-          <li class="roadmap4" id="roadmapListItem1">Roadmap</li>
-          <li class="practice6" id="practiceListItem1">Practice</li>
-          <li class="project1"  id="projectListItem1">Projects</li>
-          <li class="resources3">Resources</li>
-          <li class="placement3">Placement</li>
-        </ul>
-        <div class="navbar-button1">
-          <button class="sign-in1">
-            <div class="contact-us2">Sign In</div>
-          </button>
-          <button class="sign-up1">
-            <div class="contact-us3">Sign Up</div>
-          </button>
-        </div>
-        <div class="light-logo1" id="lightLogo">
-          <img
-            class="light-logo-icon1"
-            alt=""
-            src="./public/lightlogo@2x.png"
-          />
-        </div>
-      </nav>
+      <?php include 'navbar.php'; ?>
     </div>
+    <?php include 'foot.php';?>
 
-    <script>
-      var roadmapListItem = document.getElementById("roadmapListItem");
-      if (roadmapListItem) {
-        roadmapListItem.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.html";
-        });
-      }
-      
-      var practiceListItem = document.getElementById("practiceListItem");
-      if (practiceListItem) {
-        practiceListItem.addEventListener("click", function (e) {
-          window.location.href = "./new.html";
-        });
-      }
-      
-      var roadmapListItem1 = document.getElementById("roadmapListItem1");
-      if (roadmapListItem1) {
-        roadmapListItem1.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.html";
-        });
-      }
-      
-      var practiceListItem1 = document.getElementById("projectListItem1");
-      if (practiceListItem1) {
-        practiceListItem1.addEventListener("click", function (e) {
-          window.location.href = "./project.html";
-        });
-      }
-      
-      var lightLogo = document.getElementById("lightLogo");
-      if (lightLogo) {
-        lightLogo.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='hero']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-          }
-        });
-      }
-      </script>
   </body>
 </html>

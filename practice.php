@@ -44,8 +44,9 @@
       </header>
       <main class="main">
         <div class="search-bar">
-          <input class="input-field" placeholder="Enter Field" type="text" />
-
+          <div class="input-field">
+            <div class="enter-field">Enter Field</div>
+          </div>
           <div class="button2">
             <div class="start-practicing">Start Practicing</div>
           </div>
@@ -183,75 +184,7 @@
           </div>
         </div>
       </footer>
-      <nav class="navbar">
-        <ul class="navbar-text" id="navbar">
-          <li class="roadmap1" id="roadmapListItem">Roadmap</li>
-          <li class="practice2" id="practiceListItem1">Practice</li>
-          <li class="project">Projects</li>
-          <li class="resources1">Resources</li>
-          <li class="placement1">Placement</li>
-        </ul>
-        <div class="navbar-button">
-          <button class="sign-in">
-            <div class="contact-us">Sign In</div>
-          </button>
-          <button class="sign-up">
-            <div class="start1">Sign Up</div>
-          </button>
-        </div>
-        <a class="light-logo" href="./home1.html" id="lightLogo">
-          <img
-            class="light-logo-icon"
-            alt=""
-            src="./public/lightlogo@2x.png"
-            id="lightLogoImage"
-          />
-        </a>
-      </nav>
+      <?php include 'navbar.php'; ?>
     </div>
-
-    <script>
-      var roadmap = document.getElementById("roadmap");
-      if (roadmap) {
-        roadmap.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.html";
-        });
-      }
-
-      var practiceListItem = document.getElementById("practiceListItem");
-      if (practiceListItem) {
-        practiceListItem.addEventListener("click", function (e) {
-          window.location.href = "practice.html";
-        });
-      }
-
-      var roadmapListItem = document.getElementById("roadmapListItem");
-      if (roadmapListItem) {
-        roadmapListItem.addEventListener("click", function (e) {
-          window.location.href = "./roadmap.html";
-        });
-      }
-
-      var practiceListItem1 = document.getElementById("practiceListItem1");
-      if (practiceListItem1) {
-        practiceListItem1.addEventListener("click", function (e) {
-          window.location.href = "practice.html";
-        });
-      }
-
-      var lightLogoImage = document.getElementById("lightLogoImage");
-      if (lightLogoImage) {
-        lightLogoImage.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
-        });
-      }
-
-      var lightLogo = document.getElementById("lightLogo");
-      if (lightLogo) {
-        lightLogo.addEventListener("click", function (e) {
-          window.location.href = "./home1.html";
-        });
-      }
-    </script>
   </body>
 </html>
